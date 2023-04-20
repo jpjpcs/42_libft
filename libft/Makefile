@@ -19,8 +19,11 @@ fclean: clean
 	${RM} ${NAME}
 $(EXECUTABLE)clean: fclean
 	${RM} ${EXECUTABLE}
+#chatgpt suggests to remove the line above and include in the fclean, like this: fclean: clean
+	${RM} ${NAME} ${EXECUTABLE}
 re: fclean all
 $(EXECUTABLE): ${NAME} main.c
 	${CC} ${CFLAGS} ${INCLUDE} main.c ${NAME} -o ${EXECUTABLE}
 	./${EXECUTABLE}
 .PHONY: all clean fclean re
+

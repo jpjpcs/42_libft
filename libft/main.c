@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 16:29:46 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/04/19 16:56:18 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/04/20 12:43:10 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,16 @@ int main ()
     printf("\nTest of ft_strlen word Hello: \n str lenght is %ld \n", ft_strlen("hello"));
     printf("\nTest of strlen word Hello: \n str lenght is %ld \n", strlen("hello"));
 	printf("\n_____________________\n\n");
+    //memset
+	printf("test of memset. Return of s is: %p \n", ft_memset((unsigned char[]){48, 49}, 57, sizeof((int[]){48, 49})));
+    printf("\n_____________________\n\n");
+    //bzero
+	char str[] = "hello, world!";
+    printf("Before ft_bzero: %s\n", str);
+	ft_bzero(str, sizeof(str));
+    printf("After ft_bzero: %s\n", str);
+    printf("\n_____________________\n\n");
+
+
     return (0);
 }
