@@ -22,6 +22,6 @@ int	ft_isalnum(int c)
 /* int	main (void)
 {	
 	char str [] = "1";
-	printf("return is: %d \n", ft_isalnum(*str));
+	printf("return (is: %d \n", ft_isalnum(*str)));
 	return (0);
 }  */

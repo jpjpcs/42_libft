@@ -22,6 +22,6 @@ int	ft_isprint(int c)
 /* int	main (void)
 {	
 	int str = 127;
-	printf("return is: %d \n", ft_isprint(str));
+	printf("return (is: %d \n", ft_isprint(str)));
 	return (0);
 }    */
