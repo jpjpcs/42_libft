@@ -15,6 +15,9 @@
 int	main(void)
 {
 	void	*p;
+	char	str[];
+	int		result;
+	int		result_1;
 
 	printf("\n___________________________\n\n");
 	printf("\nTest of all libft functions\n");
@@ -53,7 +56,7 @@ int	main(void)
 	printf("test of memset. Return of s is: %p \n",
 			ft_memset((unsigned char[]){48, 49}, 57, sizeof((int[]){48, 49})));
 	printf("\n_____________________\n\n");
-	char str [] = "[h][e][l][l][o], world!";
+	str[] = "[h][e][l][l][o], world!";
 	printf("Before ft_bzero: %s\n", str);
 	ft_bzero(str, strlen(str));
 	printf("After ft_bzero: %s\n", str);
@@ -91,32 +94,34 @@ int	main(void)
 	else
 		printf("memchr did not find '%c'\n\n", 'w');
 	printf("\n_____________________\n\n");
-    int result = ft_memcmp("Hello, world!", "Hello, friends!", strlen("Hello, world!"));
-    if (result == 0)
-    {
-        printf("The strings are equal.\n");
-    }
-    else if (result < 0)
-    {
-        printf("String 1 is less than string 2.\n");
-    }
-    else
-    {
-        printf("String 1 is greater than string 2.\n\n");
-    }
-	  int result_1 = memcmp("Hello, world!", "Hello, friends!", strlen("Hello, world!"));
-    if (result_1 == 0)
-    {
-        printf("The strings are equal.\n");
-    }
-    else if (result_1 < 0)
-    {
-        printf("String 1 is less than string 2.\n");
-    }
-    else
-    {
-        printf("String 1 is greater than string 2.\n");
-    }
- 	printf("\n_____________________\n\n");
+	result = ft_memcmp("Hello, world!", "Hello, friends!", strlen("Hello,
+				world!"));
+	if (result == 0)
+	{
+		printf("The strings are equal.\n");
+	}
+	else if (result < 0)
+	{
+		printf("String 1 is less than string 2.\n");
+	}
+	else
+	{
+		printf("String 1 is greater than string 2.\n\n");
+	}
+	result_1 = memcmp("Hello, world!", "Hello, friends!", strlen("Hello,
+				world!"));
+	if (result_1 == 0)
+	{
+		printf("The strings are equal.\n");
+	}
+	else if (result_1 < 0)
+	{
+		printf("String 1 is less than string 2.\n");
+	}
+	else
+	{
+		printf("String 1 is greater than string 2.\n");
+	}
+	printf("\n_____________________\n\n");
 	return (0);
 }
