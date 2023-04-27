@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 19:15:54 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/04/20 12:56:03 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:37:48 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void	ft_bzero(void *s, size_t n)
 
 /* int main ()
 {	
-	char str [] = "hello, world!";
-	printf("Before ft_bzero: %s\n", str);
+	char str [] = "[h][e][l][l][o], world!";
+	printf("\nBefore ft_bzero: %s\n", str);
 	ft_bzero(str, sizeof(str));
-	printf("After ft_bzero: %s\n", str);
-	return(0);
-} */
+	printf("After ft_bzero: %s\n\n\n", str);
+    return 0;
+}  */

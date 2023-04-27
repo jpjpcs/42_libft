@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 12:57:48 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/04/26 16:37:53 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:44:13 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t size)
 }
 
 /* int main()
-{
-	const char src [] = "Hello World";
-	char dest [8] = "Hi";
-	size_t size = sizeof(src);
-	printf("src string before ft_cpy: %s\n", src);
-	printf("dest string before ft_cpy: %s\n", dest);
+	before ft_cpy: %s\n", dest);
 	ft_memcpy(dest, src, size);
 	printf("src string after ft_memcpy: %s\n", src);
 	printf("dest string after ft_memcpy: %s\n\n", dest);
+	
 	const char src_1 [] = "Hello World";
 	char dest_1 [8] = "1234567";
 	size_t size_1 = sizeof(src);
