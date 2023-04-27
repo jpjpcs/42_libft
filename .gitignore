@@ -1,3 +1,4 @@
 .gitignore:testes/*
+testes/*
 testes/libft-war-machine
 testes/libftTester
