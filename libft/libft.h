@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 10:00:31 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/02 10:57:17 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/02 14:37:46 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t destsize);
 char	*ft_strchr(const char *s, int c);
 char * ft_strrchr(const char *s, int c);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
+char *ft_strnstr(const char *big, const char *little, size_t len);
 
 #endif
