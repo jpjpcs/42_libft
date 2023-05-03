@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:52:49 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/03 22:36:25 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/04 00:09:38 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[len] = '\0';
 	return (substr);
 }
-
 /* int main ()
 {
     char s[] = "Hello, World!";
@@ -62,10 +61,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	substr = ft_substr(s, 7, 100);
 	printf("%s\n", substr); // Output: world!
+		// O len é maior que a string. Nesse caso ajusta-se a len 
+		para um tamanho que acabe no final da string. Pra tal,
+		subtrai-se o tamanho do start ao início da cópia 
+		da string --> len = length
+		- start;
 	free(substr);
 
 	substr = ft_substr(s, 100, 5);
-	printf("%s\n", substr); // Output: 
+	printf("%s\n", substr); // Output:
+		// O output é vazio. Apenas esta verificação é 
+		pedida nos teste do war-machine. 
+		O de cima não é pedido. Se o start começa fora da string,
+		ou seja, o start é maior que o length da string,
+		então passamos o len a zero para que não copie nada. --> len = 0;
 	free(substr);
     return (0);
 } */
