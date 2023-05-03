@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:31:00 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/03 13:14:57 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/03 16:09:27 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,43 +14,35 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
 	int	sign;
 	int	count;
 	int	result;
 
-	i = 0;
 	sign = 1;
 	count = 0;
 	result = 0;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	while (str[i] == 43 || str[i] == 45)
+	while (*str == 32 || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str == 43 || *str == 45)
 	{
-		if (str[i] == 43 || str[i] == 45)
-		{
-			count++;
-			if (count > 1)
-				return (0);
-			if (str[i] == 45)
-				sign = sign * (-1);
-			i++;
-		}
+		if (*str == 45)
+			sign = sign * (-1);
+		str++;
 	}
-	while (str[i] >= 48 && str[i] <= 57)
+	while (*str >= 48 && *str <= 57)
 	{
-		result = (result * 10) + (str[i] - 48);
-		i++;
+		result = (result * 10) + (*str - 48);
+		str++;
 	}
 	return (result * sign);
 }
-/* int main ()
+/* int	main(void)
 {
-    const char str_1[] = "   --1234";
-    int result = ft_atoi(str_1);
-    printf("\nchar converted to int: %d\n", result);
+	const char str_1[] = " -  +1234";
+	int result = ft_atoi(str_1);
+	printf("\nchar converted to int: %d\n", result);
 
-    char str_2[] ="   --1234";
-    printf("\nchar converted to int: %d\n\n", atoi(str_2));
-    return (0);  
+	char str_2[] = " -  +1234";
+	printf("\nchar converted to int: %d\n\n", atoi(str_2));
+	return (0);
 } */
