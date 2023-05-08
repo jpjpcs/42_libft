@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 21:05:30 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/08 22:10:12 by jode-jes         ###   ########.fr       */
+/*   Created: 2023/05/08 23:35:35 by jode-jes          #+#    #+#             */
+/*   Updated: 2023/05/08 23:47:18 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
+	write(fd, &c, 1);
 }
 
-/* void ft_add_index (unsigned int i, char *c)
+/* int	main(void)
 {
-    *c += i;
-}
+	// Test the ft_putchar_fd function
+	char c = 'A';           // Character to output
+	int fd = STDOUT_FILENO; // File descriptor for standard output.
 
-int	main(void)
-{
-    char str[] = "Hello";
-    printf("\nOriginal str is: %s\n\n", str);
-    ft_striteri (str, ft_add_index);
-    printf("\nModified str is: %s\n\n\n", str);
-    return (0);
+	// Output the character to the given file descriptor
+	ft_putchar_fd(c, fd);
+
+	return (0);
 } */

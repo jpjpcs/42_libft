@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 21:05:30 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/08 22:10:12 by jode-jes         ###   ########.fr       */
+/*   Created: 2023/05/09 00:07:24 by jode-jes          #+#    #+#             */
+/*   Updated: 2023/05/09 00:12:45 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		f(i, &s[i]);
+		write(fd, &s[i], 1);
 		i++;
 	}
+	write(fd, "\n", 1);
 }
 
-/* void ft_add_index (unsigned int i, char *c)
+/* int	main(void)
 {
-    *c += i;
-}
-
-int	main(void)
-{
-    char str[] = "Hello";
-    printf("\nOriginal str is: %s\n\n", str);
-    ft_striteri (str, ft_add_index);
-    printf("\nModified str is: %s\n\n\n", str);
-    return (0);
+	// Test the function by writing "Hello, world!" to standard output
+	ft_putendl_fd("Hello, world!", 1);
+	return (0);
 } */

@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 21:05:30 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/08 22:10:12 by jode-jes         ###   ########.fr       */
+/*   Created: 2023/05/09 00:13:21 by jode-jes          #+#    #+#             */
+/*   Updated: 2023/05/09 00:31:39 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	i;
+	long int	nb;
 
-	i = 0;
-	while (s[i])
+	nb = n;
+	if (n < 0)
 	{
-		f(i, &s[i]);
-		i++;
+		ft_putchar_fd('-', fd);
+		nb = -nb;
 	}
+	if (nb > 9)
+		ft_putnbr_fd(nb / 10, fd);
+	ft_putchar_fd(nb % 10 + '0', fd);
 }
 
-/* void ft_add_index (unsigned int i, char *c)
+/* int	main(void)
 {
-    *c += i;
-}
-
-int	main(void)
-{
-    char str[] = "Hello";
-    printf("\nOriginal str is: %s\n\n", str);
-    ft_striteri (str, ft_add_index);
-    printf("\nModified str is: %s\n\n\n", str);
-    return (0);
+	int n = -2147483648;
+	int fd = 1;
+	ft_putnbr_fd(n, fd);
+	return (0);
 } */
