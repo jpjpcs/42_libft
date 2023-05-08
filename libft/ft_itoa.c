@@ -6,16 +6,9 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:16:46 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/08 17:36:33 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/08 19:55:00 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
-
-void itoa(int num, char str)
-{
-    
-}
 
 #include "libft.h"
 
@@ -58,12 +51,12 @@ char	*ft_itoa(int n)
 	return (c);
 }
 
-int main(void)
+/* int	main(void)
 {
-    int num = -12345;
-    char *str = ft_itoa(num);
-    printf("Number: %d\n", num);
-    printf("String: %s\n", str);
-    free(str);
-    return 0;
-}
+	int num = -12345;
+	char *str = ft_itoa(num);
+	printf("Number: %d\n", num);
+	printf("String: %s\n", str);
+	free(str);
+	return (0);
+} */
