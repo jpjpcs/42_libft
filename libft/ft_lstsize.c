@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 12:03:01 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/10 12:20:31 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/10 12:21:51 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int ft_lstsize(t_list *lst) {
     return count;
 }
 
-int main()
+/* int main()
 {
     t_list *lst = NULL;
     t_list *new_node;
@@ -46,4 +46,4 @@ int main()
     printf("\nSize of list: %d\n\n", size);
 
     return 0;
-}
+} */
