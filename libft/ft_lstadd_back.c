@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/09 13:07:12 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/10 11:29:41 by jode-jes         ###   ########.fr       */
+/*   Created: 2023/05/10 11:21:23 by jode-jes          #+#    #+#             */
+/*   Updated: 2023/05/10 11:29:50 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (*lst == NULL)
-	{
+	t_list	*temp;
+
+	if (!lst || !new)
+		return ;
+    
+	if (!*lst)
 		*lst = new;
-		return;
+	else
+	{
+		temp = *lst;
+		while (temp->next)
+			temp = temp->next;
+		temp->next = new;
 	}
-	new->next = *lst;
-	*lst = new;
 }
 
 /* int main() 
@@ -31,14 +38,14 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
     // Create a new node with content "world"
     new_node = ft_lstnew("world");
 
-    // Add the new node to the beginning of the list
-    ft_lstadd_front(&lst, new_node);
+    // Add the new node to the end of the list
+    ft_lstadd_back(&lst, new_node);
 
     // Create another new node with content "hello"
     new_node = ft_lstnew("hello");
 
-    // Add the second new node to the beginning of the list
-    ft_lstadd_front(&lst, new_node);
+    // Add the second new node to the end of the list
+    ft_lstadd_back(&lst, new_node);
 
     // Print the contents of the list
     while (lst != NULL)
