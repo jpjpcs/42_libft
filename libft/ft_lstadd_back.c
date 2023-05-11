@@ -18,7 +18,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new_node)
 
 	if (!lst || !new_node)
 		return ;
-    
 	if (!*lst)
 		*lst = new_node;
 	else
