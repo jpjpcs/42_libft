@@ -6,20 +6,19 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 20:42:13 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/11 21:39:22 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/15 11:22:05 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    if (!lst || !del)
-        return;
-    del(lst->content);
-    free(lst);
-    lst = NULL;
-     
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
+	lst = NULL;
 }
 
 /* int main()
@@ -34,14 +33,17 @@ void ft_lstdelone(t_list *lst, void (*del)(void*))
     // free the list with ft_lstdelone
 
     ft_lstdelone(node1, &free);
-    // attempt to print the list to confirm it has been freed. It will print the nodes that weren´t deleted, but not the one that was.
+   
+	// attempt to print the list to confirm it has been freed. It will print the nodes that weren´t deleted,
+	but not the one that was.
     printf("\n%s\n\n", (char*)node2->content); // this should print 
     printf("\n%s\n\n", (char*)node3->content); // this should print 
-    printf("\n%s\n\n", (char*)node1->content); // this should cause a segmentation fault   
+    printf("\n%s\n\n", (char*)node1->content);
+	// this should cause a segmentation fault   
     return (0);
  } */
-
-int main(void)
+/* 
+int	main(void)
 {
     t_list *node = ft_lstnew(malloc(sizeof(int)));
     *((int*)node->content) = 42;
@@ -52,6 +54,5 @@ int main(void)
     
     printf("Content after freeing: %d\n", *((int*)node->content));
     
-    return 0;
-}
- 
+    return (0);
+} */
