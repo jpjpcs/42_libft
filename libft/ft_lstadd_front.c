@@ -6,21 +6,21 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 13:07:12 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/10 11:41:03 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/16 11:17:36 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new_node)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (*lst == NULL)
 	{
-		*lst = new_node;
+		*lst = new;
 		return ;
 	}
-	new_node->next = *lst;
-	*lst = new_node;
+	new->next = *lst;
+	*lst = new;
 }
 
 /* int main() 

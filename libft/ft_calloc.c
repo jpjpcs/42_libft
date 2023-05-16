@@ -6,7 +6,7 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 15:42:06 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/03 11:13:42 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/16 11:57:50 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,15 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
-	size_t	total_size;
-	void	*ptr;
-	char	*temp;
+	size_t	sum;
+	void	*p;
 
-	total_size = nmemb * size;
-	i = 0;
-	ptr = malloc(total_size);
-	if (ptr == NULL)
-	{
+	sum = nmemb * size;
+	p = malloc(sum);
+	if (!p)
 		return (NULL);
-	}
-	temp = (char *)ptr;
-	while (i < total_size)
-	{
-		temp[i] = 0;
-		i++;
-	}
-	return (ptr);
+	ft_memset(p, 0, sum);
+	return (p);
 }
 
 /* int	main(void)

@@ -6,13 +6,13 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:31:00 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/05/03 16:09:27 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/16 11:13:28 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	sign;
 	int	count;
@@ -21,28 +21,28 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	count = 0;
 	result = 0;
-	while (*str == 32 || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == 43 || *str == 45)
+	while (*nptr == 32 || (*nptr >= 9 && *nptr <= 13))
+		nptr++;
+	if (*nptr == 43 || *nptr == 45)
 	{
-		if (*str == 45)
+		if (*nptr == 45)
 			sign = sign * (-1);
-		str++;
+		nptr++;
 	}
-	while (*str >= 48 && *str <= 57)
+	while (*nptr >= 48 && *nptr <= 57)
 	{
-		result = (result * 10) + (*str - 48);
-		str++;
+		result = (result * 10) + (*nptr - 48);
+		nptr++;
 	}
 	return (result * sign);
 }
 /* int	main(void)
 {
-	const char str_1[] = " -  +1234";
-	int result = ft_atoi(str_1);
+	const char nptr_1[] = " -  +1234";
+	int result = ft_atoi(nptr_1);
 	printf("\nchar converted to int: %d\n", result);
 
-	char str_2[] = " -  +1234";
-	printf("\nchar converted to int: %d\n\n", atoi(str_2));
+	char nptr_2[] = " -  +1234";
+	printf("\nchar converted to int: %d\n\n", atoi(nptr_2));
 	return (0);
 } */

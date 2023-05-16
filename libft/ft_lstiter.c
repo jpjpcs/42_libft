@@ -12,24 +12,24 @@
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    if (lst == NULL || f == NULL)
-        return;
-    while (lst != NULL)
-    {
-      f(lst->content);
-      lst = lst->next;
-    }
+	if (lst == NULL || f == NULL)
+		return ;
+	while (lst != NULL)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
 
 /* // Example function to be applied to each node's content
-void    print_content(void *content)
+void	print_content(void *content)
 {
     printf("%s\n", (char *)content);
 }
 
-int main(void)
+int	main(void)
 {
     // Create a sample list with three nodes
     t_list *node1 = malloc(sizeof(t_list));
@@ -43,12 +43,13 @@ int main(void)
     node3->content = "!";
     node3->next = NULL;
 
-    ft_lstiter(node1, print_content);  // Apply print_content function to each node's content
+    ft_lstiter(node1, print_content); 
+	// Apply print_content function to each node's content
 
     // Free the memory allocated for the list
     free(node1);
     free(node2);
     free(node3);
 
-    return 0;
+    return (0);
 } */

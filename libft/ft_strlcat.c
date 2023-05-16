@@ -6,31 +6,31 @@
 /*   By: jode-jes <jode-jes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 11:21:50 by jode-jes          #+#    #+#             */
-/*   Updated: 2023/04/28 18:36:52 by jode-jes         ###   ########.fr       */
+/*   Updated: 2023/05/16 11:40:23 by jode-jes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t destsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
 	j = 0;
-	while (dest[i] != '\0' && i < destsize)
+	while (dst[i] != '\0' && i < size)
 	{
 		i++;
 	}
-	while (src[j] != '\0' && i + j + 1 < destsize)
+	while (src[j] != '\0' && i + j + 1 < size)
 	{
-		dest[i + j] = src[j];
+		dst[i + j] = src[j];
 		j++;
 	}
-	if (i < destsize)
+	if (i < size)
 	{
-		dest[i + j] = '\0';
+		dst[i + j] = '\0';
 	}
 	while (src[j] != '\0')
 	{
