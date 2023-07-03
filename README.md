@@ -9,3 +9,12 @@ Implemented a collection of functions mirroring the behavior of standard libc fu
 Developed functions such as isalpha, isdigit, strlen, memcpy, calloc, and more, adhering to their defined behavior.
 Utilized memory management techniques and dynamic allocation using malloc to ensure efficient resource utilization.
 Designed a Makefile for the project, incorporating compilation flags and rules for building and cleaning the library.
+
+### Videos
+```Markdown
+https://www.youtube.com/watch?v=GExnnTaBELk
+https://makefiletutorial.com/
+https://www.youtube.com/watch?v=DtGrdB8wQ_8
+https://www.gnu.org/software/make/manual/make.html#Makefile-Arguments
+https://www.gnu.org/software/make/manual/make.html#Goals
+```
